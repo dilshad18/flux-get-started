@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Namespace
+metadata: 
+  labels: 
+    name: ingress-controller
+  name: ingress-controller
+
+--- 
+apiVersion: v1
+kind: Namespace
+metadata: 
+  labels: 
+    name: ontrack-priv
+  name: ontrack-priv
+
+--- 
+apiVersion: v1
+kind: Namespace
+metadata: 
+  labels: 
+    name: ontrack-pub
+  name: ontrack-pub
+
+--- 
+apiVersion: v1
+kind: Namespace
+metadata: 
+  labels: 
+    name: ontrack-tooling
+  name: ontrack-tooling
