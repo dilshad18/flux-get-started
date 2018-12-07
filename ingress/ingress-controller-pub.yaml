@@ -6,14 +6,14 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: nginx-config-pub
-  namespace: ingress-controller
+  namespace: vendor-tooling
 data:
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: nginx-ingress-pub
-  namespace: ingress-controller
+  namespace: vendor-tooling
 spec:
   selector:
     matchLabels:
@@ -54,7 +54,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-ingress-pub
-  namespace: ingress-controller
+  namespace: vendor-tooling
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
 spec:
